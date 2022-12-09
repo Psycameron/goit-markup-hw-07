@@ -53,6 +53,10 @@ body {
   margin: 0;
 }
 
+.link {
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -70,10 +74,6 @@ p {
   margin-left: auto;
 
   /* outline: 2px solid orange; */
-}
-
-.section.no-padding {
-  padding-top: 0;
 }
 
 /* Hidden title */
@@ -155,7 +155,6 @@ p {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
   color: var(--title-text-color);
 
   transition: color 250ms var(--timing-function);
@@ -198,7 +197,6 @@ p {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 
   color: var(--primary-text-color);
 
@@ -563,7 +561,6 @@ p {
   font-size: 14px;
   line-height: 1.5;
   font-style: normal;
-  text-decoration: none;
 
   color: var(--wtite-color);
 
@@ -576,7 +573,6 @@ p {
   font-size: 14px;
   line-height: 1.5;
   font-style: normal;
-  text-decoration: none;
 
   color: var(--transparent-white);
 
@@ -691,7 +687,7 @@ p {
 
 /* Filter */
 
-.filter-list {
+.filter__list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -700,66 +696,39 @@ p {
 
 /* Portfolio-content */
 
-.portfolio-list {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   padding: 0;
 }
 
-.item-descr {
-  padding: 20px 24px;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-}
-
-.portfolio-subtitle {
-  margin-bottom: 4px;
-
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.portfolio-list .text {
-  color: var(--primary-text-color);
-  font-size: 16px;
-  line-height: 1.88;
-}
-
-.portfolio-list .link {
-  text-decoration: none;
-}
-
-.portfolio-list .image {
-  display: block;
-}
-
-.portfolio-link {
+.portfolio__link {
   display: block;
 
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transition: box-shadow 250 ms var(--timing-function);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
+.portfolio__link:hover,
+.portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-list .thumb {
+.portfolio__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-overlay {
+.portfolio__image {
+  display: block;
+}
+
+.portfolio__overlay {
   display: flex;
   position: absolute;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
   left: 0;
   overflow: auto;
@@ -767,27 +736,50 @@ p {
   width: 100%;
   height: 100%;
 
-  transform: translateY(100%);
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
-
-  align-items: center;
-  justify-content: center;
-
   font-size: 18px;
   line-height: 1.56;
 
   color: var(--wtite-color);
   background-color: var(--portfolio-overlay);
+
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
-.portfolio-overlay > .subject {
+.portfolio__link:hover .portfolio__overlay {
+  transform: translateY(0%);
+}
+
+.portfolio__descr {
   width: 322px;
 }
 
-.portfolio-link:hover .portfolio-overlay {
-  transform: translateY(0%);
+.portfolio__box {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
+
+.portfolio__subtitle {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--title-text-color);
+}
+
+.portfolio__text {
+  font-size: 16px;
+  line-height: 1.88;
+
+  color: var(--primary-text-color);
+}
+
 
 /* === Modal === */
 
@@ -807,13 +799,13 @@ p {
     visibility 250ms var(--timing-function);
 }
 
-.backdrop.is-hidden {
+.backdrop--is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop--is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
@@ -824,14 +816,12 @@ p {
   transform: translate(-50%, -50%) scale(1);
 
   width: 528px;
-  /* height: 581px; */
 
   background-color: var(--wtite-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: scale;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
