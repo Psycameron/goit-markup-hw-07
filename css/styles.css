@@ -437,20 +437,17 @@ p {
 
 /* Clients */
 
-.clients-list {
+.clients__list {
   display: flex;
-  justify-content: center;
   gap: 30px;
 }
 
-.clients-item {
-  display: flex;
-  justify-content: center;
+.clients__item {
   width: 170px;
   height: 92px;
 }
 
-.clients-link {
+.clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -462,17 +459,16 @@ p {
   border-radius: 4px;
   color: var(--primary-text-color);
 
-  transition-property: border, color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transition: border 250ms var(--timing-function),
+      color 250ms var(--timing-function);
 }
 
-.clients-icon {
+.clients__icon {
   fill: currentColor;
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   border: 1px solid var(--accent-text-color);
   color: var(--accent-text-color);
   outline: transparent;
