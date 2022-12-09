@@ -95,11 +95,14 @@ p {
 /* Logo */
 
 .logo {
+  display: inline-block;
+
   color: var(--accent-text-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+  letter-spacing: 0.03em;
   text-decoration: none;
 }
 
@@ -107,9 +110,12 @@ p {
   color: var(--black-color);
 }
 
-.footer-logo {
+.logo--white-accent {
   color: var(--wtite-color);
-  letter-spacing: 0.03em;
+}
+
+.page-footer__logo {
+  margin-bottom: 20px;
 }
 
 /* Header */
@@ -179,12 +185,12 @@ p {
 
 /* Contacts */
 
-.contacts-nav {
+.contacts {
   display: flex;
   margin-left: auto;
 }
 
-.contacts-nav__link {
+.contacts__link {
   display: flex;
   align-items: center;
 
@@ -199,20 +205,20 @@ p {
   transition: color 250ms var(--timing-function);
 }
 
-.contacts-nav__link:hover,
-.contacts-nav__link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--accent-text-color);
 }
 
-.contacts-nav__item {
+.contacts__item {
   margin-left: 50px;
 }
 
-.contacts-nav__item:first-child {
+.contacts__item:first-child {
   margin-left: 0;
 }
 
-.contacts-nav__icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -435,6 +441,8 @@ p {
   outline: transparent;
 }
 
+
+
 /* Clients */
 
 .clients__list {
@@ -546,17 +554,12 @@ p {
   background-color: var(--primary-bgc);
 }
 
-.page-footer .logo {
-  display: block;
-  margin-bottom: 20px;
-}
-
 .address {
   display: flex;
   flex-direction: column;
 }
 
-.location-footer {
+.address__location {
   font-size: 14px;
   line-height: 1.5;
   font-style: normal;
@@ -564,12 +567,10 @@ p {
 
   color: var(--wtite-color);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transform: color 250ms var(--timing-function);
 }
 
-.contact-footer {
+.address__contacts {
   margin-top: 9px;
 
   font-size: 14px;
@@ -579,24 +580,22 @@ p {
 
   color: var(--transparent-white);
 
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transform: color 250ms var(--timing-function);
 }
 
-.location-footer:hover,
-.location-footer:focus {
+.address__location:hover,
+.address__location:focus {
   color: var(--accent-text-color);
   outline: transparent;
 }
 
-.contact-footer:hover,
-.contact-footer:focus {
+.address__contacts:hover,
+.address__contacts:focus {
   color: var(--accent-text-color);
   outline: transparent;
 }
 
-.footer-title {
+.social__text {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -607,16 +606,16 @@ p {
   color: var(--wtite-color);
 }
 
-.footer-container {
+.page-footer__wrap {
   display: flex;
   align-items: baseline;
 }
 
-.footer-social {
+.page-footer__social {
   margin-left: 70px;
 }
 
-.social-link.footer {
+.social__link--reverse {
   background-color: var(--footer-icon-color);
   color: var(--wtite-color);
 
@@ -625,17 +624,19 @@ p {
   transition-timing-function: var(--timing-function);
 }
 
-.social-link.footer:hover,
-.social-link.footer:focus {
+.social__link--reverse:hover,
+.social__link--reverse:focus {
   background-color: var(--accent-text-color);
   outline: transparent;
 }
+
+/* Subscribe */
 
 .subscribe {
   margin-left: auto;
 }
 
-.subscribe-title {
+.subscribe__title {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -646,13 +647,13 @@ p {
   color: var(--wtite-color);
 }
 
-.subscribe-form {
+.subscribe__wrap {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.subscribe-input {
+.subscribe__input {
   width: 358px;
   height: 50px;
   padding: 15px 16px;
@@ -663,13 +664,11 @@ p {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transition: border-color 250ms var(--timing-function);
 }
 
-.subscribe-input:hover,
-.subscribe-input:focus {
+.subscribe__input:hover,
+.subscribe__input:focus {
   border-color: var(--accent-text-color);
   outline: transparent;
 }
@@ -679,7 +678,7 @@ p {
   position: relative;
 }
 
-.subscribe-icon {
+.subscribe__icon {
   position: absolute;
   right: 28px;
   top: 50%;
