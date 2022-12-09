@@ -274,16 +274,13 @@ p {
 
 .feature__list {
   display: flex;
+  gap: 30px;
 }
 
 .feature__item {
   max-width: 270px;
-  margin-left: 30px;
 }
 
-.feature__item:first-child {
-  margin-left: 0;
-}
 
 .feature__subtitle {
   margin-bottom: 10px;
@@ -310,19 +307,27 @@ p {
   width: 70px;
   height: 70px;
 }
+
 /* Чим ми займаємося */
 
-.work-list {
+.work__list {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 
-.work-list .image {
+.work__item {
+  position: relative;
+}
+
+.work__image {
   display: block;
 }
 
-.work-box {
+.work__wrap {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
   left: 0;
 
@@ -332,20 +337,16 @@ p {
   background-color: var(--bgc-work-li);
 }
 
-.work-subtitle {
-  padding: 27px 0;
-
+.work__subtitle {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
+
   color: var(--wtite-color);
 }
 
-.work-item {
-  position: relative;
-}
 
 /* Team  */
 
