@@ -665,7 +665,7 @@ p {
   outline: transparent;
 }
 
-.subscribe.button {
+.subscribe__button {
   display: flex;
   position: relative;
 }
