@@ -261,7 +261,7 @@ p {
   padding-bottom: 94px;
 }
 
-.section-title {
+.section__title {
   color: var(--title-text-color);
   font-size: 36px;
   line-height: 1.17;
@@ -272,7 +272,30 @@ p {
 
 /* Feature */
 
-.feature-block {
+.feature__list {
+  display: flex;
+}
+
+.feature__item {
+  max-width: 270px;
+  margin-left: 30px;
+}
+
+.feature__item:first-child {
+  margin-left: 0;
+}
+
+.feature__subtitle {
+  margin-bottom: 10px;
+  
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--title-text-color);
+}
+
+.feature__wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,33 +306,10 @@ p {
   background-color: var(--secondary-bgc);
 }
 
-.feature-icon {
+.feature__icon {
   width: 70px;
   height: 70px;
 }
-
-.feature-list {
-  display: flex;
-}
-
-.feature-list .item {
-  max-width: 270px;
-  margin-left: 30px;
-}
-
-.feature-list .item:first-child {
-  margin-left: 0;
-}
-
-.feature-subtitle {
-  color: var(--title-text-color);
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-
-  margin-bottom: 10px;
-}
-
 /* Чим ми займаємося */
 
 .work-list {
