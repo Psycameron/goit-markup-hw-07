@@ -237,7 +237,7 @@ p {
   padding-bottom: 94px;
 }
 .section__title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
